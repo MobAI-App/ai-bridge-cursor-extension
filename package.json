@@ -3,7 +3,7 @@
   "displayName": "AiBridge",
   "description": "HTTP API for external applications to inject text into Cursor's Composer",
   "publisher": "mobai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",

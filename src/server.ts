@@ -58,7 +58,7 @@ async function handleRequest(
   if (req.method === "GET" && url.pathname === "/health") {
     const response: HealthResponse = {
       status: "ok",
-      version: "1.0.0",
+      version: "1.0.1",
       editor: "cursor",
     };
     json(res, response);
@@ -67,6 +67,7 @@ async function handleRequest(
 
   if (req.method === "GET" && url.pathname === "/status") {
     const response: StatusResponse = {
+      child_tool: "cursor",
       idle: !processing && queue.length() === 0,
       queueLength: queue.length(),
       chatOpen: chat.isChatOpen(),

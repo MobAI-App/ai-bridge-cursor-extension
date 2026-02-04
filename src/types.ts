@@ -16,6 +16,7 @@ export interface HealthResponse {
 }
 
 export interface StatusResponse {
+  child_tool: string;
   idle: boolean;
   queueLength: number;
   chatOpen: boolean;
