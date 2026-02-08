@@ -2,6 +2,7 @@ import * as http from "http";
 import * as vscode from "vscode";
 import * as queue from "./queue";
 import * as chat from "./chat";
+import { getEditorId } from "./chat";
 import {
   HealthResponse,
   StatusResponse,
@@ -58,8 +59,8 @@ async function handleRequest(
   if (req.method === "GET" && url.pathname === "/health") {
     const response: HealthResponse = {
       status: "ok",
-      version: "1.0.1",
-      editor: "cursor",
+      version: "1.1.0",
+      editor: getEditorId(),
     };
     json(res, response);
     return;
@@ -67,7 +68,7 @@ async function handleRequest(
 
   if (req.method === "GET" && url.pathname === "/status") {
     const response: StatusResponse = {
-      child_tool: "cursor",
+      child_tool: getEditorId(),
       idle: !processing && queue.length() === 0,
       queueLength: queue.length(),
       chatOpen: chat.isChatOpen(),

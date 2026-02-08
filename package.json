@@ -1,19 +1,28 @@
 {
-  "name": "aibridge-cursor",
+  "name": "aibridge-extension",
   "displayName": "AiBridge",
-  "description": "HTTP API for external applications to inject text into Cursor's Composer",
+  "description": "HTTP API for external applications to inject text into VS Code, Cursor, Windsurf, and other VS Code-based editors",
   "publisher": "mobai",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MobAI-App/ai-bridge-cursor-extension"
+    "url": "https://github.com/MobAI-App/aibridge-extension"
+  },
+  "homepage": "https://github.com/MobAI-App/aibridge-extension#readme",
+  "bugs": {
+    "url": "https://github.com/MobAI-App/aibridge-extension/issues"
   },
   "engines": {
     "vscode": "^1.85.0"
   },
   "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "categories": ["Other"],
+  "keywords": ["ai", "chat", "injection", "http", "api", "cursor", "windsurf", "copilot", "automation"],
   "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {

@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import * as server from "./server";
+import { detectEditorId } from "./chat";
 
 let statusBarItem: vscode.StatusBarItem;
 
@@ -14,6 +15,8 @@ function updateStatusBar(): void {
 }
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
+  await detectEditorId();
+
   statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
   statusBarItem.command = "aibridge.status";
   statusBarItem.show();
