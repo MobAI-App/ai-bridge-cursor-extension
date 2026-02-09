@@ -103,6 +103,10 @@ Set `aibridge.paranoid: true` to disable auto-submit and avoid permission prompt
 - **AiBridge: Stop Server** - Stop the HTTP server
 - **AiBridge: Show Status** - Show server status
 
+## Used By
+
+[MobAI](https://mobai.run) — a desktop app that gives AI coding agents the ability to see and control mobile devices. MobAI uses the AiBridge Extension to inject mobile app context (screenshots, UI trees, device state) directly into VS Code, Cursor, and Windsurf AI chats.
+
 ## License
 
 MIT
